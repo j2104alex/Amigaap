@@ -1,0 +1,20 @@
+.bg-orange {
+    background-color: #F29F05;
+}
+
+.my-btn-primary {
+    background-color: rgb(255, 255, 255);
+    border: 0.2em solid rgb(38, 115, 101);
+    padding: 0.2em 1em;
+    margin: 0 auto;
+    color: rgb(38, 115, 101);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.my-btn-primary:hover {
+    background-color: rgb(38, 115, 101);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    transition: .3s;
+}

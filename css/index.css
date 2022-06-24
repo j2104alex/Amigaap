@@ -1,0 +1,19 @@
+.map {
+    filter: blur(2px);
+}
+
+.carousel-caption {
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.carousel-title {
+    font-size: 75px;
+    color: rgb(64, 82, 79);
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
