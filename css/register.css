@@ -96,24 +96,42 @@
 }
 
 /*Terminos y condiciones, log-in*/
-.terms-container, .log-in {
+.terms-container,
+.log-in {
     text-align: center;
 }
 
+
 input[type="checkbox"] {
     appearance: none;
-    border: 0.2em solid rgb(38, 115, 101);
+    border: 0.2em solid var(--btn-primary-border-color);
     width: 1.1em;
     height: 1.1em;
     cursor: pointer;
 }
 
 input[type="checkbox"]:checked {
-    background-color: rgb(38, 115, 101);
+    background-color: var(--btn-primary-border-color);
     color: rgb(255, 255, 255);
+    position:relative
 }
 
 input[type="checkbox"]:checked::after {
     content: "x";
-    color: aqua;
+    color: white;
+    width: 18px;
+    height: 17px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-9px, -11px);
+    font-weight: 500;
+    /* position: absolute; */
+    z-index: 1;
+    /* left: 0px; */
+    /* top: 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
