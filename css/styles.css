@@ -1,10 +1,18 @@
+:root{
+    --color-primary:#F29F05;
+    --btn-primary-bg-white:rgb(255, 255, 255);
+    --btn-primary-bg:rgb(38, 115, 101);
+    --btn-primary-border-color:rgb(38, 115, 101);
+}
+
+
 .bg-orange {
-    background-color: #F29F05;
+    background-color: var(--color-primary);
 }
 
 .my-btn-primary {
-    background-color: rgb(255, 255, 255);
-    border: 0.2em solid rgb(38, 115, 101);
+    background-color: var(--btn-primary-bg-white);
+    border: 0.2em solid var(--btn-primary-border-color);
     padding: 0.2em 1em;
     margin: 0 auto;
     color: rgb(38, 115, 101);
@@ -13,7 +21,7 @@
 }
 
 .my-btn-primary:hover {
-    background-color: rgb(38, 115, 101);
+    background-color: var(--btn-primary-bg);
     color: rgb(255, 255, 255);
     font-weight: 500;
     transition: .3s;
