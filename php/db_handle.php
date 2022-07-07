@@ -15,6 +15,7 @@ mysqli_set_charset($connection, "utf8");
 
 /**
  * Funcion para registrar usuarios nuevos en la base de datos
+ * 
  */
 function register($username, $lastname, $email, $password) {
     global $connection;
