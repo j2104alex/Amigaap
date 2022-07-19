@@ -48,7 +48,7 @@
                     <header>
                         <h1 class="principal-title">Registro</h1>
                     </header>
-                    <form action="../php/register.php" method="POST">
+                    <form action="../php/register.php" method="POST" onsubmit="validate(event)">
                         <input class="input" type="text" id="username" name="username" placeholder="Nombre" />
                         <input class="input" type="text" id="lastname" name="lastname" placeholder="Apellido" />
                         <input class="input" type="text" id="email" name="email" placeholder="Correo" />
@@ -70,6 +70,10 @@
     </main>
     <!-- Libreria js bootstrap (local) -->
     <script src="../js/bootstrap.min.js"></script>
+    <!-- Validacion formulario-->
+    <script src="../js/validators.js"></script>
+    <script src="../js/registerValidators.js"></script>
+
 </body>
 
 </html>

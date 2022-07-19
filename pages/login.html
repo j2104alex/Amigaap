@@ -48,9 +48,9 @@
                     <header>
                         <h1 class="principal-title">Iniciar sesión</h1>
                     </header>
-                    <form action="../php/login.php" method="POST">
-                        <input class="input" type="text" id="email" name="email" placeholder="Correo" />
-                        <input class="input" type="password" id="password" name="password" placeholder="Contraseña" />
+                    <form action="../php/login.php" method="POST" onsubmit="validate(event)">
+                        <input class="input" type="text" id="email" name="email" placeholder="Correo" required="required" />
+                        <input class="input" type="password" id="password" name="password" placeholder="Contraseña" required="required"/>
                         <button class="my-btn-primary" type="submit" id="ingresar" name="ingresar">Ingresar</button>
                         <label class="log-in">Si no tienes cuenta registrate <a href="./register.html">aquí</a> </label>
                     </form>
@@ -62,8 +62,12 @@
         </article>
         </article>
     </main>
-    <!-- Libreria js bootstrap (local) -->
+    <!-- js bootstrap's library (local) -->
     <script src="../js/bootstrap.min.js"></script>
+    <!--JS Validators-->
+    <!--JS Validators-->
+    <script src="../js/validators.js"></script>
+    <script src="../js/loginValidators.js"></script>
 </body>
 
 </html>
