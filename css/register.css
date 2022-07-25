@@ -34,6 +34,13 @@
     padding: 2em;
 }
 
+.form-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
 /*Tomar el primer hijo de medio contenedor (izquierda)*/
 .mid-container:nth-child(1) {
     background: linear-gradient(180deg, #F2CB05 0%, #F29F05 45.31%, #F28705 100%);

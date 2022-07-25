@@ -70,8 +70,10 @@ function show_alert($message)
  */
 function login($user_email, $user_password)
 {
-    if (user_exists($user_email)) {
-        validate_password($user_email, $user_password);
+    if (user_exists($user_email) && validate_session($user_email, $user_password)) {
+        return true;
+    } else {
+        return false;
     }
 }
 
@@ -80,18 +82,15 @@ function login($user_email, $user_password)
  * @param $user_email STRING 
  * @param $user_password STRING
  */
-function validate_password($user_email, $user_password)
+function validate_session($user_email, $user_password)
 {
     global $connection;
     $query = 'SELECT * FROM usuarios WHERE correo_usuario = "' . $user_email . '";';
     $result = mysqli_query($connection, $query);
     $user = mysqli_fetch_assoc($result);
     if ($user && $user['password_usuario'] == $user_password) {
-        header("Location: http://localhost/Amigaap-v0.2/pages/home.html");
-        exit();
+        return true;
     } else {
-        show_alert('Verificar los datos ingresados, correo o contraseña incorrectos!');
-        header("Location: http://localhost/Amigaap-v0.2/pages/login.html");
-        exit();
+        return false;
     }
 }
