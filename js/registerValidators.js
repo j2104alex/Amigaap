@@ -5,6 +5,10 @@ let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirm-password");
 let checkBox = document.getElementById("cbox1");
 
+/**
+ * Funcion para retornar los mensajes de validacion.
+ * @param {EVENT} event 
+ */
 function validate(event){
     event.preventDefault()
     if (!onlyLetters(username.value)){
