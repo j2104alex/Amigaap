@@ -1,4 +1,4 @@
-console.log(validatePassword('A2F4j69'));
+console.log(validatePassword("A2F4j69"));
 
 /**
  * Funcion para validar los caracteres minimos de entra en input.
@@ -39,10 +39,10 @@ function validateEmail(email) {
  * @returns Boolean
  */
 function validatePassword(password) {
-  console.log("valida",validateMinLength(password, 8));
-  
+  console.log("valida", validateMinLength(password, 8));
+
   if (validateMinLength(password, 8)) {
-    let validRegex = "^[0-9a-zA-z!·$%&]+$";
+    let validRegex = "^[a-zA-Z0-9!·$%&]+$";
     if (password.match(validRegex)) {
       return true;
     } else {
