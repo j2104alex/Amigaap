@@ -7,7 +7,7 @@ console.log(validatePassword("A2F4j69"));
  * @returns Booelan
  */
 function validateMinLength(word, minLength) {
-  return word.length < minLength ? true : false;
+  return word.length > minLength ? true : false;
 }
 
 //Problema detectado es 'length' no 'length'
@@ -19,7 +19,7 @@ function validateMinLength(word, minLength) {
  */
 function validateMaxLength(word, maxLength) {
   //word.length
-  return word.length > maxLength ? true : false;
+  return word.length < maxLength ? true : false;
 }
 
 /**
@@ -39,8 +39,6 @@ function validateEmail(email) {
  * @returns Boolean
  */
 function validatePassword(password) {
-  console.log("valida", validateMinLength(password, 8));
-
   if (validateMinLength(password, 8)) {
     let validRegex = "^[a-zA-Z0-9!·$%&]+$";
     if (password.match(validRegex)) {

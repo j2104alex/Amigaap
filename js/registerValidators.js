@@ -5,33 +5,47 @@ let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirm-password");
 let checkBox = document.getElementById("cbox1");
 
+
+
+
+
 /**
  * Funcion para retornar los mensajes de validacion.
- * @param {EVENT} event 
+ * @param {event} event 
  */
-function validate(event){
-    event.preventDefault()
+function validateRegister(event){
+    event.preventDefault();
     if (!onlyLetters(username.value)){
         alert("El nombre debe estar conformado solo por letras");
+        return;
     }
     else if (!onlyLetters(lastname.value)){
         alert("El apellido debe estar conformado solo por letras");
+        return;
     }
     else if (!validateEmail(email.value)){
         alert("Ingrese un correo válido")
+        return;
     }
     else if (!validatePassword(password.value)){
         alert("Ingrese una contraseña de mínimo 8 caracteres");
+        return;
     }
     else if (!validatePassword(confirmPassword.value)){
         alert("Ingrese una contraseña de mínimo 8 caracteres");
+        return;
     }
     else  if (password.value!=confirmPassword.value){
         alert("La contraseña no coincide");
+        return;
     }
-    else if (!checkBox.value){
+    else if (!checkBox.checked){
         alert("Por favor acepte los términos y condiciones");
+        
+    }else {
+        event.currentTarget.submit();
     }
+    
 }
 
 
