@@ -1,13 +1,13 @@
-function validateMinLenght(word, minLenght) {
-    if (word.lenght > minLenght) {
+function validateMinLength(word, minLength) {
+    if (word.length >= minLength) {
         return true;
     }
     else {
         return false;
     }
 }
-function validateMaxLenght(word, maxLenght) {
-    if (word.lenght < maxLenght) {
+function validateMaxLenght(word, maxLength) {
+    if (word.length < maxLength) {
         return true;
     }
     else {
@@ -16,30 +16,30 @@ function validateMaxLenght(word, maxLenght) {
 }
 function validateEmail(email) {
     let validRegex = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$";
-    if (email.match(validRegex)) {
+    if (email.match(validRegex) != null) {
         return true;
     } else {
         return false;
     }
 }
 function validatePassword(password) {
-    if (validateMinLenght(password, 8)) {
-        let validRegex = " ^[a-zA-Z0-9]+$";
-        if (password.match(validRegex)) {
+    if (validateMinLength(password, 8)) {
+        let validRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).*$";
+        if (password.match(validRegex) != null) {
             return true;
         } else {
             return false;
+            console.log(password);
         }
     }
     return false;
 }
 function onlyLetters(word) {
-    let validRegex = "^[a-zA-Z]+$";
-    if (word.match(validRegex)){
+    let validRegex = "[0-9]";
+    if (word.match(validRegex) == null) {
         return true;
     }
     else {
         return false;
     }
-    return false;
 }

@@ -7,6 +7,7 @@ let checkBox = document.getElementById("cbox1");
 
 function validate(event){
     event.preventDefault()
+    console.log(checkBox.checked);
     if (!onlyLetters(username.value)){
         alert("El nombre debe estar conformado solo por letras");
     }
@@ -17,16 +18,19 @@ function validate(event){
         alert("Ingrese un correo válido")
     }
     else if (!validatePassword(password.value)){
-        alert("Ingrese una contraseña de mínimo 8 caracteres");
+        alert("1-Ingrese una contraseña de mínimo 8 caracteres conformada por letras y numeros");
     }
     else if (!validatePassword(confirmPassword.value)){
-        alert("Ingrese una contraseña de mínimo 8 caracteres");
+        alert("2-Ingrese una contraseña de mínimo 8 caracteres conformada por letras y numeros");
     }
     else  if (password.value!=confirmPassword.value){
         alert("La contraseña no coincide");
     }
-    else if (!checkBox.value){
+    else if (!checkBox.checked){
         alert("Por favor acepte los términos y condiciones");
+    }
+    else {
+        event.currentTarget.submit();
     }
 }
 
