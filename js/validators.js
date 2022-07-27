@@ -24,7 +24,7 @@ function validateEmail(email) {
 }
 function validatePassword(password) {
     if (validateMinLenght(password, 8)) {
-        let validRegex = "^[a-z]+$";
+        let validRegex = " ^[a-zA-Z0-9]+$";
         if (password.match(validRegex)) {
             return true;
         } else {
