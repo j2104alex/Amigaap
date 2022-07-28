@@ -13,15 +13,27 @@ let checkBox = document.getElementById("cbox1");
 function validateRegister(event){
     event.preventDefault();
     if (!onlyLetters(username.value)){
-        alert("El nombre debe estar conformado solo por letras");
+        alert("El nombre debe estar confrmado solo por letras");
+        return;
+    }
+    else if (username.value == ""){
+        alert("Debe ingresar un nombre");
         return;
     }
     else if (!onlyLetters(lastname.value)){
         alert("El apellido debe estar conformado solo por letras");
         return;
     }
+    else if (lastname.value == ""){
+        alert("Debe ingresar un apellido");
+        return;
+    }
     else if (!validateEmail(email.value)){
         alert("Ingrese un correo válido")
+        return;
+    }
+    else if (email.value == ""){
+        alert("Debe ingresar un correo electrónico");
         return;
     }
     else if (!validatePassword(password.value)){
