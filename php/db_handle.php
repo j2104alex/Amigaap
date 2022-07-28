@@ -1,20 +1,20 @@
 <?php
 
-// Variables de conexión a la base de datos
+// database conection variables
 $db_name = 'amigaapp02';
 $db_username = 'root';
 $db_password = '';
 $db_hostname = '127.0.0.1';
 $db_port = '3306';
 
-//Funcion para mirar si la conexion fue exitosa
+//vairnable that store the database conection
 $connection = mysqli_connect($db_hostname, $db_username, $db_password, $db_name, $db_port);
 
-//Para modificación del alfabeto latino
+//Modify latin alphabet
 mysqli_set_charset($connection, "utf8");
 
 /**
- * Funcion para registrar usuarios nuevos en la base de datos.
+ * Function that new users on the database.
  * @param $username STRING 
  * @param $lastname STRING
  * @param $email STRING
@@ -39,7 +39,7 @@ function register($username, $lastname, $email, $password)
 }
 
 /**
- * Función para validar si un correo ya se encuentra registrado en la base de datos.
+ * Function that validate if an email is registered on the database.
  * @param $email STRING
  */
 function user_exists($email)
@@ -56,7 +56,7 @@ function user_exists($email)
 }
 
 /**
- * Funcion para mostrar mensajes en un alert.
+ * Function that show an alert message.
  * @param $message STRING
  */
 function show_alert($message)
@@ -65,7 +65,7 @@ function show_alert($message)
 }
 
 /**
- * Funcion para loguearse.
+ * Function to login.
  * @param $user_email STRING 
  * @param $user_password STRING
  */
@@ -79,7 +79,7 @@ function login($user_email, $user_password)
 }
 
 /**
- * Funcion encargada de validar que la contraseña es la correcta
+ * Function that validate the login session
  * @param $user_email STRING 
  * @param $user_password STRING
  */

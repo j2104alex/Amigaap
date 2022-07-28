@@ -7,7 +7,7 @@ let checkBox = document.getElementById("cbox1");
 
 
 /**
- * Funcion para retornar los mensajes de validacion.
+ * Function that returns the validation messages.
  * @param {event} event 
  */
 function validateRegister(event){

@@ -1,7 +1,7 @@
 <?php
 include('./db_handle.php');
 
-// Datos del usuario
+// User data
 $user_name = $_POST['username'];
 $user_lastname = $_POST['lastname'];
 $user_password = $_POST['password'];
