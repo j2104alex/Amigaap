@@ -26,14 +26,12 @@ function validateRegister(event){
     }
     else if (!validatePassword(password.value)){
 
-        alert("Ingrese una contraseña de mínimo 8 caracteres");
+        alert("Ingrese una contraseña que contenga mayuscuales, minusculas y numeros de minimo 8 caracteres");
         return;
     }
     else if (!validatePassword(confirmPassword.value)){
-        alert("1-Ingrese una contraseña de mínimo 8 caracteres conformada por letras y numeros");
-        return;
-
-        
+        alert("Ingrese una contraseña que contenga mayuscuales, minusculas y numeros de minimo 8 caracteres");
+        return;        
     }
 
     else  if (password.value!=confirmPassword.value){
