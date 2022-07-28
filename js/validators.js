@@ -1,4 +1,6 @@
 function validateMinLength(word, minLength) {
+  console.log(word,minLength);
+  console.log(word.length);
     if (word.length >= minLength) {
         return true;
     }
@@ -24,12 +26,14 @@ function validateMinLength(word, minLength) {
   }
   function validatePassword(password) {
     if (validateMinLength(password, 8)) {
-        let validRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).*$";
-        if (password.match(validRegex) != null) {
+      console.log(password);
+      let validRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).*$";
+      if (password.match(validRegex) != null) {
+          console.log(password.match(validRegex));
             return true;
         } else {
+          console.log(password.match(validRegex));
             return false;
-            console.log(password);
         }
     }
     return false;

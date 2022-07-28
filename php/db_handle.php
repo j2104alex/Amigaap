@@ -25,14 +25,14 @@ function register($username, $lastname, $email, $password)
     global $connection;
     if (user_exists($email)) {
         show_alert('El correo ya se encuentra registrado');
-        header("Location: http://localhost/Amigaap/pages/register.php?error=El correo ya se encuentra registrado");
+        header("Location: http://localhost/Amigaap-v0.2/pages/register.php?error=El correo ya se encuentra registrado");
         exit();
     } else {
         $query = 'INSERT INTO usuarios (nombre_usuario, apellido_usuario, correo_usuario, password_usuario)
                   VALUES ("' . $username . '","' . $lastname . '", "' . $email . '", "' . $password . '");';
         mysqli_query($connection, $query);
         show_alert(mysqli_insert_id($connection));
-        header("Location: http://localhost/Amigaap/pages/login.php");
+        header("Location: http://localhost/Amigaap-v0.2/pages/login.php");
         exit();
     }
 }
