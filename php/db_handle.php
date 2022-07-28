@@ -25,7 +25,8 @@ function register($username, $lastname, $email, $password)
     global $connection;
     if (user_exists($email)) {
         show_alert('El correo ya se encuentra registrado');
-        header("Location: http://localhost/Amigaap-v0.2/pages/register.php?error=El correo ya se encuentra registrado");
+        echo '<script type="text/javascript"> window.location.href="../pages/register.php"; </script>';
+        //header("Location: http://localhost/Amigaap-v0.2/pages/register.php?error=El correo ya se encuentra registrado");
         exit();
     } else {
         $query = 'INSERT INTO usuarios (nombre_usuario, apellido_usuario, correo_usuario, password_usuario)
@@ -60,7 +61,7 @@ function user_exists($email)
  */
 function show_alert($message)
 {
-    echo '<script> alert("' . $message . '");</script>';
+    echo '<script type="text/javascript"> alert("' . $message . '");</script>';
 }
 
 /**
